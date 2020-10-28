@@ -1,0 +1,73 @@
+﻿
+#tiles_container {
+  margin: 0px 0;
+  position: relative;
+}
+
+/**
+ * Grid container
+ */
+#tiles {
+  list-style-type: none;
+  position: relative; /** Needed to ensure items are laid out relative to this container **/
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Grid items
+ */
+#tiles li {
+  width: 200px;
+  /*background-color: #ffffff;*/
+  border: 0px solid #dedede;/*gin Р±С‹Р»Рѕ 1*/
+          border-radius: 0px; /*gin Р±С‹Р»Рѕ 2*/
+     -moz-border-radius: 0px; /*gin Р±С‹Р»Рѕ 2*/
+  -webkit-border-radius: 0px; /*gin Р±С‹Р»Рѕ 2*/
+
+          box-shadow:0 1px 3px 0 rgba(0,0,0,0.33);
+     -moz-box-shadow:0 1px 3px 0 rgba(0,0,0,0.33);
+  -webkit-box-shadow:0 1px 3px 0 rgba(0,0,0,0.33);
+/*
+          box-shadow:1px 1px 2px rgba(0,0,0,0.2);
+     -moz-box-shadow:1px 1px 2px rgba(0,0,0,0.2);
+  -webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.2);*/
+  
+  /*display: none;*/ /** Hide items initially to avoid a flicker effect **/
+  background: url(../images/camera-loader.gif) top center no-repeat;
+  
+  /*cursor: pointer;*/
+  padding: 0px; /* от края блока до контента */
+}
+
+#tiles li.inactive {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#tiles li img {
+  display: block;
+  /*width:220px;*//* а то в мозилле и ие картинка не масштабируется*/
+}
+
+/**
+ * Grid item text
+ */
+#tiles li p {
+  color: #666;
+  font-size: 13px;
+  margin: 10px 0 0 10px;
+  padding:0 10px 10px 0;
+}
+
+/**
+ * Placerholder css
+ */
+.wookmark-placeholder {
+          border-radius: 2px;
+     -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  /*z-index: -1;*/
+}

@@ -1,0 +1,24 @@
+﻿div.news-list img.preview_picture
+{
+	float:left;
+	margin:0 4px 6px 0;
+}
+.news_list_home a span{
+	color:#989EA9;
+    font-size: 90%;
+}
+
+.news_list_home a div.title_news{
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.news_list_home a{
+    color:#33373D;
+    text-decoration:none !important;
+  
+}
+
+.news_list_home a:hover{
+    color:#4B81AB;
+}

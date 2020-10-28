@@ -1,0 +1,9 @@
+﻿.listWithMarker_child .item-selected{
+    
+    color: #6caddf;
+}
+
+.listWithMarker .item-selected{
+    
+    color: #6caddf;
+}
