@@ -2,7 +2,6 @@ name: 'Autoedit site timer'
 
 on:
   schedule:
-    - cron: '36 22 1 * *'
     - cron: '*/5 * * * *'
 
 jobs:
