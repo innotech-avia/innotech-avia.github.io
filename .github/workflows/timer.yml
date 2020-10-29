@@ -12,12 +12,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2 # Подключаем мастер ветку
-    - run: |
-      let "d = $(shuf -i 1-20 -n 1) * 60 * 60 * 24 + 60 * 60 * 24 * 30 * 2 + $(date +%s)"
-      d=$(date -d @$d +%Y/%m/%d)
-      awk -v d=$d 'BEGIN{FS=OFS="\""} /.countdown/ {$2=d}1' assets/js/scripts.js > assets/js/scripts.js
-      git config user.name dvino
-      git config user.email dvino@sers.noreply.github.com
-      git add .
-      git commit -m "generated"
-      git push
+    - name: 'Chanre end date of timer'
+      run: |
+        let "d = $(shuf -i 1-20 -n 1) * 60 * 60 * 24 + 60 * 60 * 24 * 30 * 2 + $(date +%s)"
+        d=$(date -d @$d +%Y/%m/%d)
+        awk -v d=$d 'BEGIN{FS=OFS="\""} /.countdown/ {$2=d}1' assets/js/scripts.js > assets/js/scripts.js
+        git config user.name dvino
+        git config user.email dvino@sers.noreply.github.com
+        git add .
+        git commit -m "generated"
+        git push
