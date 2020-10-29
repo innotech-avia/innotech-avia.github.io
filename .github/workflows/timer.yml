@@ -3,7 +3,7 @@ name: 'Autoedit site timer'
 on:
   push:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "5 10 2 * *"
 
 jobs:
   build:
