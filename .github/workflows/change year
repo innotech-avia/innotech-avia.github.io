@@ -1,0 +1,23 @@
+name: 'Autoedit copywrite date'
+
+on:
+  push:
+  schedule:
+    - cron: "1 0 1 1 *"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2 # Подключаем мастер ветку
+    - name: 'Chanre copywrite date'
+      run: |
+        awk -v d=$(date +%Y) '/Все\ права\ защищены/ {$2=d}1' index.html > index.html.new
+        mv index.html.new index.html
+        git config user.name dvino
+        git config user.email dvino@sers.noreply.github.com
+        git add .
+        git commit -m "generated"
+        git push
