@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
 	*/
 	var now = new Date();
 	var countTo = 25 * 24 * 60 * 60 * 1000 + now.valueOf();    
-	$('.timer').countdown("2023/06/14", function(event) {
+	$('.timer').countdown("2023/07/03", function(event) {
 		$(this).find('.days').text(event.offset.totalDays);
 		$(this).find('.hours').text(event.offset.hours);
 		$(this).find('.minutes').text(event.offset.minutes);
