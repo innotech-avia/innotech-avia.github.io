@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4 # Подключаем мастер ветку
+    - uses: actions/checkout@main # Подключаем мастер ветку
     - name: 'Chanre end date of timer'
       run: |
         let "d = $(shuf -i 1-20 -n 1) * 60 * 60 * 24 + 60 * 60 * 24 * 30 * 2 + $(date +%s)"
