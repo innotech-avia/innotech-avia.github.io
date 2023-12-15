@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2 # Подключаем мастер ветку
+    - uses: actions/checkout@v4 # Подключаем мастер ветку
     - name: 'Chanre copywrite date'
       run: |
         awk -v d=$(date +%Y) '/Все\ права\ защищены/ {$2=d}1' index.html > index.html.new
